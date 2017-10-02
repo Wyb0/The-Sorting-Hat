@@ -88,8 +88,18 @@
 </body>
 <script>
     $("#submit").on("click", function () {
+        var checkboxValues = []
+        checkboxValues.push(
+	        $('input[name=question1]:checked').val(),
+	        $('input[name=question2]:checked').val(),
+	        $('input[name=question3]:checked').val(),
+            $('input[name=question4]:checked').val(),
+            $('input[name=question5]:checked').val()
+);
+    console.log(checkboxValues)
+
         $.get("/houseData", function(response) {
-            console.log(response)
+            //console.log(response) 
         })
     })
 </script>
