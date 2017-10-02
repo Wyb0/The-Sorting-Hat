@@ -88,18 +88,59 @@
 </body>
 <script>
     $("#submit").on("click", function () {
-        var checkboxValues = []
-        checkboxValues.push(
+        var userScore= []
+        userScore.push(
 	        $('input[name=question1]:checked').val(),
 	        $('input[name=question2]:checked').val(),
 	        $('input[name=question3]:checked').val(),
             $('input[name=question4]:checked').val(),
             $('input[name=question5]:checked').val()
-);
-    console.log(checkboxValues)
+        );
+        console.log(userScore)
 
         $.get("/houseData", function(response) {
-            //console.log(response) 
+            // console.log(response) 
+
+            var house = response;
+            console.log(house);
+
+            var houseMatch = {};
+    
+            var closestHouse = 10;
+
+            var userHouse;
+            
+            for(i=0; i < house.length; i++) {
+
+                var differences = []
+                var difference = 0;
+
+                //console.log("House: " + house[i].name)
+                for(j=0; j < house[i].scores.length; j++) {
+                    differences.push(Math.abs(house[i].scores[j] - userScore[j]))
+                }
+                console.log("Difference: " + differences)
+
+                for(k=0; k < differences.length; k++){
+                difference += differences[k]
+                }
+                console.log("Difference: " + difference)
+
+                if (houseMatch == {} ) {
+                    houseMatch = house[i];
+                    closestHouse = difference;
+                } else if (difference < closestHouse) {
+                    houseMatch = house[i];
+                    closestHouse = difference;
+                }
+                console.log("Closest House: " + closestHouse);
+                
+                if(closestHouse == difference){
+                    console.log(closestHouse, house[i].name);
+                    userHouse = house[i].name;
+                }
+            } 
+            console.log("userHouse: ", userHouse);
         })
     })
 </script>
