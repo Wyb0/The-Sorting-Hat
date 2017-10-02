@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>The Sorting Hat</title>
     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -80,12 +81,16 @@
             <div class = "col-md-5">
             </div>
             <div class = "col-md-7">
-                <a class="btn btn-primary btn-lg" role="button">Submit</a></p>
+                <a class="btn btn-primary btn-lg" id="submit" role="button">Submit</a></p>
             </div>
         </div>
     </div>
 </body>
 <script>
-console.log()
+    $("#submit").on("click", function () {
+        $.get("/houseData", function(response) {
+            console.log(response)
+        })
+    })
 </script>
 </html>
