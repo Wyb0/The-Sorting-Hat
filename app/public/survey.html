@@ -1,42 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>The Sorting Hat</title>
-    
+
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+        crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
 
-    <style>body {
+    <style>
+        body {
             background-image: url("https://i.imgur.com/aM9niQ8.jpg");
             background-size: cover;
         }
-        
+
         .jumbotron {
             background-color: transparent;
             color: white;
         }
-        
+
         #questions {
             color: white;
         }
-        
+
         #myModal {
             color: black;
         }
-        </style>
+    </style>
 </head>
+
 <body>
-    <div class ="container" id="questions">
-        <div class = "row">
-            <div class = "col-md-5">
+    <div class="container" id="questions">
+        <div class="row">
+            <div class="col-md-5">
             </div>
-            <div class = "col-md-7">
+            <div class="col-md-7">
                 <h3>Which job would you prefer?</h3>
                 <br>
                 <label class="radio-inline"><input type="radio" name="question1" value="1">Professional Athlete</label><br>
@@ -46,10 +52,10 @@
             </div>
         </div>
         <br>
-        <div class = "row">
-            <div class = "col-md-5">
+        <div class="row">
+            <div class="col-md-5">
             </div>
-            <div class = "col-md-7">
+            <div class="col-md-7">
                 <h3>Which class most interests you?</h3>
                 <br>
                 <label class="radio-inline"><input type="radio" name="question2" value="1">Defence Against the Dark Arts</label><br>
@@ -59,25 +65,25 @@
             </div>
         </div>
         <br>
-        <div class = "row">
-            <div class = "col-md-5">
+        <div class="row">
+            <div class="col-md-5">
             </div>
-            <div class = "col-md-7">
+            <div class="col-md-7">
                 <h3>If you could do one thing right now, what would it be?</h3>
                 <br>
                 <label class="radio-inline"><input type="radio" name="question3" value="1">Explore the World</label><br>
                 <label class="radio-inline"><input type="radio" name="question3" value="2">Start your own Company</label><br>
                 <label class="radio-inline"><input type="radio" name="question3" value="3">Start a Family</label><br>
                 <label class="radio-inline"><input type="radio" name="question3" value="4">Stay in School</label><br>
-                </div>
             </div>
+        </div>
         <br>
-        <div class = "row">
-            <div class = "col-md-5">
+        <div class="row">
+            <div class="col-md-5">
             </div>
-            <div class = "col-md-7">
+            <div class="col-md-7">
                 <h3>What would be your spirit animal?</h3>
-                <br>                
+                <br>
                 <label class="radio-inline"><input type="radio" name="question4" value="1">Lion</label><br>
                 <label class="radio-inline"><input type="radio" name="question4" value="2">Snake</label><br>
                 <label class="radio-inline"><input type="radio" name="question4" value="3">Badger</label><br>
@@ -85,12 +91,12 @@
             </div>
         </div>
         <br>
-        <div class = "row">
-            <div class = "col-md-5">
+        <div class="row">
+            <div class="col-md-5">
             </div>
-            <div class = "col-md-7">
+            <div class="col-md-7">
                 <h3>You received a Howler from your parents. What for?</h3>
-                <br>                
+                <br>
                 <label class="radio-inline"><input type="radio" name="question5" value="1">Sneaking into the Forbidden Forest at night on a dare</label><br>
                 <label class="radio-inline"><input type="radio" name="question5" value="2">Getting caught cheating in my Divination O.W.L.</label><br>
                 <label class="radio-inline"><input type="radio" name="question5" value="3">I would never receive a Howler!</label><br>
@@ -98,32 +104,32 @@
             </div>
         </div>
         <br>
-        <div class = "row">
-            <div class = "col-md-5">
+        <div class="row">
+            <div class="col-md-5">
             </div>
-            <div class = "col-md-7">
+            <div class="col-md-7">
                 <button class="btn btn-primary btn-lg" id="submit" role="button" data-toggle="modal" data-target="#exampleModal">Submit</button>
             </div>
 
             <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                      <div class="modal-content">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
                         <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLabel">Your Hogwart's House is...</h5>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <h5 class="modal-title" id="exampleModalLabel">Your Hogwart's House is...</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                           </button>
                         </div>
                         <div class="modal-body">
-                          <div id ="pic">
+                            <div id="pic">
                             </div>
                         </div>
                         <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         </div>
-                      </div>
                     </div>
-                  </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
@@ -131,45 +137,45 @@
     $("#submit").on("click", function () {
         $("#myModal").modal('toggle');
 
-        var userScore= []
+        var userScore = []
         userScore.push(
-	        $('input[name=question1]:checked').val(),
-	        $('input[name=question2]:checked').val(),
-	        $('input[name=question3]:checked').val(),
+            $('input[name=question1]:checked').val(),
+            $('input[name=question2]:checked').val(),
+            $('input[name=question3]:checked').val(),
             $('input[name=question4]:checked').val(),
             $('input[name=question5]:checked').val()
         );
         console.log(userScore)
 
-        $.get("/houseData", function(response) {
+        $.get("/houseData", function (response) {
             // console.log(response) 
 
             var house = response;
             console.log(house);
 
             var houseMatch = {};
-    
+
             var closestHouse = 10;
 
             var userHouse;
-            
-            for(i=0; i < house.length; i++) {
+
+            for (i = 0; i < house.length; i++) {
 
                 var differences = []
                 var difference = 0;
 
                 //console.log("House: " + house[i].name)
-                for(j=0; j < house[i].scores.length; j++) {
+                for (j = 0; j < house[i].scores.length; j++) {
                     differences.push(Math.abs(house[i].scores[j] - userScore[j]))
                 }
                 console.log("Difference: " + differences)
 
-                for(k=0; k < differences.length; k++){
-                difference += differences[k]
+                for (k = 0; k < differences.length; k++) {
+                    difference += differences[k]
                 }
                 console.log("Difference: " + difference)
 
-                if (houseMatch == {} ) {
+                if (houseMatch == {}) {
                     houseMatch = house[i];
                     closestHouse = difference;
                 } else if (difference < closestHouse) {
@@ -177,22 +183,21 @@
                     closestHouse = difference;
                 }
                 console.log("Closest House: " + closestHouse);
-                
-                if(closestHouse == difference){
+
+                if (closestHouse == difference) {
                     console.log(closestHouse, house[i].name);
                     userHouse = house[i].name;
-                        $("#pic").empty();
-                        $("#pic").append("<p>" + house[i].name + "</p>" + "<br>" + "<img src ='" + house[i].photo + "'>")
+                    $("#pic").empty();
+                    $("#pic").append("<p>" + house[i].name + "</p>" + "<br>" + "<img src ='" + house[i]
+                        .photo + "'>")
                 }
                 console.log("Photo: " + house[i].photo)
-            } 
+            }
             console.log("userHouse: ", userHouse);
         })
 
-    
-})
 
-
-    
+    })
 </script>
+
 </html>
