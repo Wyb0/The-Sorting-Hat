@@ -96,7 +96,9 @@
                           </button>
                         </div>
                         <div class="modal-body">
-                          <h1>Testing</h1>
+                          <div id ="pic">
+                            
+                          </div>
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -161,10 +163,14 @@
                 if(closestHouse == difference){
                     console.log(closestHouse, house[i].name);
                     userHouse = house[i].name;
+                        $("#pic").empty();
+                        $("#pic").append("<p>" + house[i].name + "</p>" + "<br>" + "<img src ='" + house[i].photo + "'>")
                 }
+                console.log("Photo: " + house[0].photo)
             } 
             console.log("userHouse: ", userHouse);
         })
+
     
 })
 
