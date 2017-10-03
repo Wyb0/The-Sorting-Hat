@@ -1,22 +1,22 @@
 var house = [
     {
     "name": "Gryffindor",
-    "photo": "Gryffindor.png",
+    "photo": "https://i.imgur.com/75dSKYf.png",
     "scores": [1,1,1,1,1]
     },
     {
     "name": "Ravenclaw",
-    "photo": "Ravenclaw.png",
+    "photo": "https://i.imgur.com/QdHoX2R.png",
     "scores": [4,4,4,4,4]
     },
     {
     "name": "Hufflepuff",
-    "photo": "Hufflepuff.png",
+    "photo": "https://i.imgur.com/1JqMIxS.png",
     "scores": [3,3,3,3,3]
     },
     {
     "name": "Slytherin",
-    "photo": "Slytherin.png",
+    "photo": "https://i.imgur.com/HBFh62Q.png",
     "scores": [2,2,2,2,2]
         }
 ]
