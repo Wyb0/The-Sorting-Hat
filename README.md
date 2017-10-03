@@ -9,4 +9,4 @@ Or are you whatever adjective a Hufflepuff is?
 
 Find out by taking the Quiz!
 
-![The Sorting Hat: test](/Gifs/test.gif "The Sorting Hat")
+![The Sorting Hat: test](/gifs/test.gif "The Sorting Hat")
